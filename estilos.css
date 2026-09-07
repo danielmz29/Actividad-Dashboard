@@ -1,0 +1,388 @@
+:root {
+    --principal: #3157d5;
+    --principal-dark: #2442a8;
+    --barra-lateral-color: #182236;
+    --fondo: #f4f6fa;
+    --blanco: #ffffff;
+    --texto: #222a3a;
+    --texto-suave: #6c7482;
+    --borde: #e1e6ef;
+    --exito: #247447;
+    --exito-bg: #e7f5ed;
+    --aviso: #8a5700;
+    --aviso-bg: #fff2d7;
+    --fuente: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente);
+    color: var(--texto);
+    background-color: var(--fondo);
+}
+
+a {
+    color: inherit;
+}
+
+a:focus,
+summary:focus {
+    outline: 3px solid #f2b632;
+    outline-offset: 2px;
+}
+
+/* Estructura principal con CSS Grid */
+.bloque-general {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "barra encabezado"
+        "barra contenido"
+        "barra pie";
+}
+
+.barrara-lateral {
+    grid-area: barra;
+    min-height: 100vh;
+    padding: 24px 18px;
+    background-color: var(--barra-lateral-color);
+    color: var(--blanco);
+}
+
+.barrara-lateral h2 {
+    margin: 0 0 28px;
+    font-size: 1.15rem;
+}
+
+.navegacion-escritorio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.enlace-navegacion {
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: #c7cede;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.enlace-navegacion:hover,
+.enlace-navegacion.activo {
+    color: var(--blanco);
+    background-color: #283652;
+}
+
+.encabezado-superior {
+    grid-area: encabezado;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado-superior h1 {
+    margin: 3px 0 0;
+    font-size: 1.45rem;
+}
+
+.texto-pequeno {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+}
+
+.perfil-estudiante {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.9rem;
+}
+
+.perfil-estudiante img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.menu-movil {
+    display: none;
+}
+
+.contenido-principal {
+    grid-area: contenido;
+    padding: 28px;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.titulo-seccion h2,
+.bloque h2 {
+    margin-top: 4px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tarjeta,
+.bloque {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.tarjeta {
+    padding: 18px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.tarjeta:hover {
+    background-color: #fafbff;
+    transform: translateY(-2px);
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
+
+.numero {
+    margin: 12px 0 4px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.bloque {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.lista-simple {
+    line-height: 1.8;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 13px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    color: var(--texto-suave);
+    font-size: 0.82rem;
+}
+
+.estado {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+}
+
+.disponible {
+    color: var(--exito);
+    background-color: var(--exito-bg);
+}
+
+.bajo {
+    color: var(--aviso);
+    background-color: var(--aviso-bg);
+}
+
+/* Gráfico sencillo hecho con HTML y CSS */
+.grafico {
+    height: 240px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 10px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.elemento-barra {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    color: var(--texto-suave);
+    font-size: 0.78rem;
+}
+
+.barra {
+    width: 55%;
+    max-width: 42px;
+    min-width: 20px;
+    background-color: var(--principal);
+    border-radius: 6px 6px 0 0;
+    transition: background-color 0.2s;
+}
+
+.barra:hover {
+    background-color: var(--principal-dark);
+}
+
+.barrara-1 { height: 40%; }
+.barrara-2 { height: 58%; }
+.barrara-3 { height: 50%; }
+.barrara-4 { height: 68%; }
+.barrara-5 { height: 88%; }
+.barrara-6 { height: 55%; }
+.barrara-7 { height: 32%; }
+
+.reportes {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pie-pagina {
+    grid-area: pie;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+    color: var(--texto-suave);
+    border-top: 1px solid var(--borde);
+}
+
+.pie-pagina p {
+    margin: 0;
+}
+
+/* Vista para teléfono móvil */
+@media (max-width: 700px) {
+    .bloque-general {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "encabezado"
+            "contenido"
+            "pie";
+    }
+
+    .barrara-lateral {
+        display: none;
+    }
+
+    .encabezado-superior {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .encabezado-superior h1 {
+        font-size: 1.3rem;
+    }
+
+    .perfil-estudiante {
+        margin-left: auto;
+    }
+
+    .menu-movil {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-movil summary {
+        padding: 11px 12px;
+        border-radius: 8px;
+        background-color: var(--barra-lateral-color);
+        color: var(--blanco);
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .menu-movil nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 6px;
+        padding: 8px;
+        border: 1px solid var(--borde);
+        border-radius: 8px;
+        background-color: var(--blanco);
+    }
+
+    .menu-movil .enlace-navegacion {
+        color: var(--texto);
+    }
+
+    .menu-movil .enlace-navegacion:hover,
+    .menu-movil .enlace-navegacion.activo {
+        color: var(--principal-dark);
+        background-color: #eef2ff;
+    }
+
+    .contenido-principal {
+        padding: 18px 14px 24px;
+    }
+
+    .tarjetas,
+    .reportes {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tarjeta,
+    .bloque {
+        border-radius: 8px;
+    }
+
+    .bloque {
+        padding: 16px;
+    }
+
+    .grafico {
+        height: 190px;
+        gap: 6px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .barra {
+        width: 70%;
+        min-width: 12px;
+    }
+
+    .pie-pagina {
+        padding: 14px 16px;
+        font-size: 0.76rem;
+    }
+}

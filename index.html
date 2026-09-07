@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de Inventario, proyecto académico realizado con HTML5 y CSS.">
+    <title>Dashboard de Inventario | Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="panel-general">
+
+        <!-- Barra lateral para escritorio -->
+        <aside class="barra-lateral">
+            <h2>Dashboard de Inventario</h2>
+
+            <nav class="navegacion-escritorio" role="navigation" aria-label="Navegación principal">
+                <a class="enlace-navegacion activo" href="index.html" aria-current="page">Inicio</a>
+                <a class="enlace-navegacion" href="productos.html">Productos</a>
+                <a class="enlace-navegacion" href="movimientos.html">Movimientos</a>
+                <a class="enlace-navegacion" href="reportes.html">Reportes</a>
+            </nav>
+        </aside>
+
+        <!-- Encabezado -->
+        <header class="encabezado-superior">
+            <div>
+                <p class="texto-pequeno">Actividad académica</p>
+                <h1>Inicio</h1>
+            </div>
+
+            <div class="perfil-estudiante">
+                <img src="assets/avatar.svg" alt="Avatar del estudiante">
+                <span>Estudiante</span>
+            </div>
+
+            <!-- Menú desplegable para móvil -->
+            <details class="menu-movil">
+                <summary>Menú</summary>
+
+                <nav role="navigation" aria-label="Menú móvil">
+                    <a class="enlace-navegacion activo" href="index.html" aria-current="page">Inicio</a>
+                <a class="enlace-navegacion" href="productos.html">Productos</a>
+                <a class="enlace-navegacion" href="movimientos.html">Movimientos</a>
+                <a class="enlace-navegacion" href="reportes.html">Reportes</a>
+                </nav>
+            </details>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="contenido-principal" role="main">
+            <section aria-labelledby="resumen-titulo">
+                <div class="titulo-seccion">
+                    <div>
+                        <p class="texto-pequeno">Vista general</p>
+                        <h2 id="resumen-titulo">Resumen del inventario</h2>
+                    </div>
+                </div>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Productos</h3>
+                        <p class="numero">1.248</p>
+                        <p>Productos registrados</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Stock bajo</h3>
+                        <p class="numero">18</p>
+                        <p>Productos por reponer</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Categorías</h3>
+                        <p class="numero">12</p>
+                        <p>Categorías registradas</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Valor estimado</h3>
+                        <p class="numero">$84.500</p>
+                        <p>Valor total en bodega</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bloque" aria-labelledby="actividad-titulo">
+                <h2 id="actividad-titulo">Actividad reciente</h2>
+
+                <ul class="lista-simple">
+                    <li>Se agregaron 5 teclados al inventario.</li>
+                    <li>El stock de mouse inalámbrico bajó a 8 unidades.</li>
+                    <li>Se registró una nueva categoría de almacenamiento.</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="pie-pagina">
+            <p>Creado Por Daniel Mojica</p>
+            <span>2026</span>
+        </footer>
+
+    </div>
+</body>
+</html>

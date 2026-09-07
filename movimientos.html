@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de Inventario, proyecto académico realizado con HTML5 y CSS.">
+    <title>Dashboard de Inventario | Movimientos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="panel-general">
+
+        <!-- Barra lateral para escritorio -->
+        <aside class="barra-lateral">
+            <h2>Dashboard de Inventario</h2>
+
+            <nav class="navegacion-escritorio" role="navigation" aria-label="Navegación principal">
+                <a class="enlace-navegacion" href="index.html">Inicio</a>
+                <a class="enlace-navegacion" href="productos.html">Productos</a>
+                <a class="enlace-navegacion activo" href="movimientos.html" aria-current="page">Movimientos</a>
+                <a class="enlace-navegacion" href="reportes.html">Reportes</a>
+            </nav>
+        </aside>
+
+        <!-- Encabezado -->
+        <header class="encabezado-superior">
+            <div>
+                <p class="texto-pequeno">Actividad académica</p>
+                <h1>Movimientos</h1>
+            </div>
+
+            <div class="perfil-estudiante">
+                <img src="assets/avatar.svg" alt="Avatar del estudiante">
+                <span>Estudiante</span>
+            </div>
+
+            <!-- Menú desplegable para móvil -->
+            <details class="menu-movil">
+                <summary>Menú</summary>
+
+                <nav role="navigation" aria-label="Menú móvil">
+                    <a class="enlace-navegacion" href="index.html">Inicio</a>
+                <a class="enlace-navegacion" href="productos.html">Productos</a>
+                <a class="enlace-navegacion activo" href="movimientos.html" aria-current="page">Movimientos</a>
+                <a class="enlace-navegacion" href="reportes.html">Reportes</a>
+                </nav>
+            </details>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="contenido-principal" role="main">
+            <section class="bloque" aria-labelledby="movimientos-titulo">
+                <p class="texto-pequeno">Últimos 7 días</p>
+                <h2 id="movimientos-titulo">Movimientos de inventario</h2>
+                <p>El siguiente gráfico representa salidas de productos durante la semana.</p>
+
+                <div class="grafico" role="img" aria-label="Gráfico de barras de movimientos de inventario de lunes a domingo">
+                    <div class="elemento-barra">
+                        <div class="barra barra-1"></div>
+                        <span>Lun</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-2"></div>
+                        <span>Mar</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-3"></div>
+                        <span>Mié</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-4"></div>
+                        <span>Jue</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-5"></div>
+                        <span>Vie</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-6"></div>
+                        <span>Sáb</span>
+                    </div>
+                    <div class="elemento-barra">
+                        <div class="barra barra-7"></div>
+                        <span>Dom</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bloque">
+                <h2>Resumen semanal</h2>
+                <p>El viernes fue el día con mayor movimiento de productos.</p>
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="pie-pagina">
+            <p>Creado Por Daniel Mojica</p>
+            <span>2026</span>
+        </footer>
+
+    </div>
+</body>
+</html>
